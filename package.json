@@ -4,9 +4,11 @@
   "author": "Mittwald CM Service GmbH & Co. KG",
   "name": "@mittwald/vaults",
   "description": "Almost Fully Typed Vault Client for Typescript and Javascript",
-  "main": "index.js",
-  "types": "index.d.ts",
+  "main": "dist/index.js",
+  "types": "dist/index.js",
   "scripts": {
+    "prepare": "npm run build-ts",
+    "build-ts": "tsc",
     "test": "yarn test:unit",
     "lint": "eslint 'src/**/*.{ts,tsx}' 2>/dev/null",
     "compile": "yarn tsc -p tsconfig.dist.json",
